@@ -4,7 +4,7 @@ import axios from 'axios';
 import CountryCard from '../components/countryCard';
 import { Container } from 'react-bootstrap';
 
-export default function Home({query}) {
+export default function Home({ query }) {
     const [countriesList, setCountriesList] = useState([]);
     const [filteredCountries, setFilteredCountries] = useState([]);
     //running the function
@@ -22,8 +22,8 @@ export default function Home({query}) {
         }
     }, []);
 
-     useEffect(() => {
-    if(query.length >= 3) {
+    useEffect(() => {
+        if (query.length >= 3) {
             const newList = countriesList.filter((country) => {
                 return country.name.common.toLowerCase().includes(query.toLowerCase());
             })
@@ -41,13 +41,14 @@ export default function Home({query}) {
         )
     })
 
-  
+
 
     return (
         <div>
-       
-            <h1>Home</h1>
-            {countryCard}
+            <Container>
+                <h1>Home</h1>
+                {countryCard}
+            </Container>
         </div>
     );
 

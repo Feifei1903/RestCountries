@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    background-color: aqua;
+}
+
+.bg-navbar{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(16, 150, 150);
+}
+

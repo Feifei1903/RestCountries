@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { useState } from 'react';
+
+import './style.css';
+
 const Navbar = ({ query, setQuery }) => {
     const navigate = useNavigate();
 
@@ -11,7 +14,7 @@ const Navbar = ({ query, setQuery }) => {
     }, [query]);
 
     return (
-        <div className='navBar'>\
+        <div className="bg-navbar">
             <Link to='/' >Home</Link>
             <input type='text' value={query} onChange={setQuery} />
             <hr />
